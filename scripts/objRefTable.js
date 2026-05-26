@@ -9,6 +9,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch,
 		C3.Plugins.Text,
 		C3.Behaviors.MoveTo,
+		C3.Behaviors.Pin,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
@@ -20,7 +21,14 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetVisible,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Behaviors.MoveTo.Acts.MoveToPosition,
-		C3.Behaviors.Platform.Acts.SetIgnoreInput
+		C3.Behaviors.Platform.Acts.SetIgnoreInput,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Behaviors.Pin.Acts.PinByImagePoint,
+		C3.Plugins.System.Cnds.Compare,
+		C3.Behaviors.Platform.Exps.VectorX,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Plugins.Sprite.Acts.SetMirrored,
+		C3.Behaviors.Platform.Exps.VectorY
 	];
 };
 self.C3_JsPropNameTable = [
@@ -41,7 +49,9 @@ self.C3_JsPropNameTable = [
 	{bau: 0},
 	{Texto: 0},
 	{MoverPara: 0},
-	{logo: 0}
+	{logo: 0},
+	{Fixar: 0},
+	{player_animacao: 0}
 ];
 
 self.InstanceType = {
@@ -57,5 +67,6 @@ self.InstanceType = {
 	chave: class extends self.ISpriteInstance {},
 	bau: class extends self.ISpriteInstance {},
 	Texto: class extends self.ITextInstance {},
-	logo: class extends self.ISpriteInstance {}
+	logo: class extends self.ISpriteInstance {},
+	player_animacao: class extends self.ISpriteInstance {}
 }
