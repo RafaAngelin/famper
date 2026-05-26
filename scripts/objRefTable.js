@@ -10,25 +10,32 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text,
 		C3.Behaviors.MoveTo,
 		C3.Behaviors.Pin,
+		C3.Plugins.Tilemap,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Acts.RestartLayout,
-		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Cnds.CompareVar,
+		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Plugins.System.Acts.Wait,
+		C3.Behaviors.solid.Acts.SetEnabled,
+		C3.Plugins.Tilemap.Acts.SetVisible,
 		C3.Plugins.Text.Acts.SetVisible,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Behaviors.MoveTo.Acts.MoveToPosition,
 		C3.Behaviors.Platform.Acts.SetIgnoreInput,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Behaviors.Pin.Acts.PinByImagePoint,
-		C3.Plugins.System.Cnds.Compare,
 		C3.Behaviors.Platform.Exps.VectorX,
-		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.Sprite.Acts.SetMirrored,
-		C3.Behaviors.Platform.Exps.VectorY
+		C3.Behaviors.Platform.Exps.VectorY,
+		C3.Plugins.Touch.Cnds.OnTouchEnd
 	];
 };
 self.C3_JsPropNameTable = [
@@ -43,7 +50,6 @@ self.C3_JsPropNameTable = [
 	{jump: 0},
 	{Toque: 0},
 	{reset: 0},
-	{porta: 0},
 	{lava: 0},
 	{chave: 0},
 	{bau: 0},
@@ -51,7 +57,13 @@ self.C3_JsPropNameTable = [
 	{MoverPara: 0},
 	{logo: 0},
 	{Fixar: 0},
-	{player_animacao: 0}
+	{player_animacao: 0},
+	{Mosaico: 0},
+	{Mosaico2: 0},
+	{Mosaico3: 0},
+	{porta: 0},
+	{brilho: 0},
+	{fundoTexto: 0}
 ];
 
 self.InstanceType = {
@@ -62,11 +74,16 @@ self.InstanceType = {
 	jump: class extends self.ISpriteInstance {},
 	Toque: class extends self.IInstance {},
 	reset: class extends self.ISpriteInstance {},
-	porta: class extends self.ISpriteInstance {},
 	lava: class extends self.ISpriteInstance {},
 	chave: class extends self.ISpriteInstance {},
 	bau: class extends self.ISpriteInstance {},
 	Texto: class extends self.ITextInstance {},
 	logo: class extends self.ISpriteInstance {},
-	player_animacao: class extends self.ISpriteInstance {}
+	player_animacao: class extends self.ISpriteInstance {},
+	Mosaico: class extends self.ITilemapInstance {},
+	Mosaico2: class extends self.ITilemapInstance {},
+	Mosaico3: class extends self.ITilemapInstance {},
+	porta: class extends self.ISpriteInstance {},
+	brilho: class extends self.ISpriteInstance {},
+	fundoTexto: class extends self.ITilemapInstance {}
 }
