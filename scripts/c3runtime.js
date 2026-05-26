@@ -1410,7 +1410,7 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "abrindo",
 		() => 1140,
-		() => 650,
+		() => 700,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpBehavior();
