@@ -7,6 +7,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.bound,
 		C3.Behaviors.solid,
 		C3.Plugins.Touch,
+		C3.Plugins.Text,
+		C3.Behaviors.MoveTo,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
@@ -14,7 +16,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
-		C3.Plugins.System.Cnds.CompareVar
+		C3.Plugins.System.Cnds.CompareVar,
+		C3.Plugins.Text.Acts.SetVisible,
+		C3.Plugins.Sprite.Acts.SetVisible,
+		C3.Behaviors.MoveTo.Acts.MoveToPosition,
+		C3.Behaviors.Platform.Acts.SetIgnoreInput
 	];
 };
 self.C3_JsPropNameTable = [
@@ -31,7 +37,11 @@ self.C3_JsPropNameTable = [
 	{reset: 0},
 	{porta: 0},
 	{lava: 0},
-	{chave: 0}
+	{chave: 0},
+	{bau: 0},
+	{Texto: 0},
+	{MoverPara: 0},
+	{logo: 0}
 ];
 
 self.InstanceType = {
@@ -44,5 +54,8 @@ self.InstanceType = {
 	reset: class extends self.ISpriteInstance {},
 	porta: class extends self.ISpriteInstance {},
 	lava: class extends self.ISpriteInstance {},
-	chave: class extends self.ISpriteInstance {}
+	chave: class extends self.ISpriteInstance {},
+	bau: class extends self.ISpriteInstance {},
+	Texto: class extends self.ITextInstance {},
+	logo: class extends self.ISpriteInstance {}
 }
