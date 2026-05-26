@@ -25,9 +25,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.System.Acts.Wait,
 		C3.Behaviors.solid.Acts.SetEnabled,
+		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.Tilemap.Acts.SetVisible,
 		C3.Plugins.Text.Acts.SetVisible,
-		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Behaviors.MoveTo.Acts.MoveToPosition,
 		C3.Behaviors.Platform.Acts.SetIgnoreInput,
 		C3.Plugins.System.Cnds.OnLayoutStart,
@@ -63,7 +63,8 @@ self.C3_JsPropNameTable = [
 	{Mosaico3: 0},
 	{porta: 0},
 	{brilho: 0},
-	{fundoTexto: 0}
+	{fundoTexto: 0},
+	{porta2: 0}
 ];
 
 self.InstanceType = {
@@ -85,5 +86,6 @@ self.InstanceType = {
 	Mosaico3: class extends self.ITilemapInstance {},
 	porta: class extends self.ISpriteInstance {},
 	brilho: class extends self.ISpriteInstance {},
-	fundoTexto: class extends self.ITilemapInstance {}
+	fundoTexto: class extends self.ITilemapInstance {},
+	porta2: class extends self.ISpriteInstance {}
 }
